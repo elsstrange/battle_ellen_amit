@@ -1,8 +1,8 @@
 feature 'enter names' do
   scenario 'submitting names' do
     visit '/'
-    fill_in 'player_one', with: 'Ant'
-    fill_in 'player_two', with: 'Dec'
+    fill_in 'player_one_name', with: 'Ant'
+    fill_in 'player_two_name', with: 'Dec'
     click_button 'submit'
     expect(page).to have_content("Player One: Ant\nPlayer Two: Dec")
   end
