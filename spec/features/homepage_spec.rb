@@ -1,7 +1,12 @@
+require 'spec_helper'
+
 describe 'the homepage', type: :feature do
-  it 'shows some text' do
-    visit '/'
-    expect(page).to have_content 'Testing infrastructure working!'
+
+  it 'can submit two players' do
+    sign_in_and_play('Amit', 'Ed')
+    # puts "page: #{page.body}"
+    expect(page).to have_content 'Player1: Amit'
+    expect(page).to have_content 'Player2: Ed'
   end
 end
 
@@ -14,3 +19,5 @@ end
 #   click_button 'Sign in'
 #   expect(page).to have_content 'Success'
 # end
+
+ # type: :feature
