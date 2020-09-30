@@ -1,2 +1,9 @@
-<h1>Player One: <%= @player_one_name %></h1>
-<h1>Player Two: <%= @player_two_name %></h1>
+<h1>Player One: <%= game.player_one.name %></h1>
+<h1>Player Two: <%= game.player_two.name %></h1>
+<form action="/attack" method="get">
+  <p class="button">
+    <button type="submit" id="attack">ATTACK <%= game.passive_player.name %>!</button>
+  </p>
+</form>
+<p><%= game.active_player.name %> Health: <%= game.active_player.health %></p>
+<p><%= game.passive_player.name %> Health: <%= game.passive_player.health %></p>

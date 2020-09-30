@@ -1,9 +1,15 @@
 ENV['RACK_ENV'] = 'test'
 
-require './app'
+# Gems used
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+
+# Repo files
+require './app'
+require './lib/player'
+require './lib/game'
+require './spec/features/web_helpers'
 
 Capybara.app = Battle
 

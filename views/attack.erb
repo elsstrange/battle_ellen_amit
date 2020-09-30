@@ -1,0 +1,7 @@
+<p>WHAM! You attacked <%= game.active_player.name %>!</p>
+<p><%= game.active_player.name %> Health: <%= game.active_player.health %>
+<form action="/play" method="get">
+  <p class="button">
+    <button type="submit" id="ouch">OUCH!</button>
+  </p>
+</form>
