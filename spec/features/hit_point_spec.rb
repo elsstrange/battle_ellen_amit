@@ -11,4 +11,5 @@ describe 'hit points', type: :feature do
     click_link 'Attack'
     expect(page).to have_content "Ed's HP reduced by 10. Ed's HP: 50"
   end
+
 end

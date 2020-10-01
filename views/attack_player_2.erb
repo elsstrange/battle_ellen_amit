@@ -6,7 +6,11 @@
   </head>
   <body>
     <h3><%= $game.player1.name %> attacked <%= $game.player2.name %></h3>
+    <% if $game.player2.hitpoints > 0 %>
     <h3><%= $game.player2.name %>'s HP reduced by 10. <%= $game.player2.name %>'s HP: <%= $game.player2.hitpoints %>"</h3>
     <a href='/attack-player-1'>Attack <%= $game.player1.name %></a>
+    <% else %>
+    <h3><%= $game.player2.name %> Lost!</h3>
+    <% end %>
   </body>
 </html>
