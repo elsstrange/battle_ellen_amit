@@ -8,8 +8,8 @@ class Player
     @hitpoints = hitpoints
   end
 
-  def attacked
-    @hitpoints -= 10
+  def attacked(damage = 10)
+    @hitpoints -= damage
   end
 
 end
