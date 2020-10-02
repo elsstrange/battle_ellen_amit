@@ -1,6 +1,6 @@
-<p>WHAM! You attacked <%= game.active_player.name %>!</p>
-<p><%= game.active_player.name %> Health: <%= game.active_player.health %>
-<form action="/play" method="get">
+<p>WHAM! You attacked <%= game.passive_player.name %>!</p>
+<p><%= game.passive_player.name %> Health: <%= game.passive_player.health %>
+<form action="/end-turn" method="post">
   <p class="button">
     <button type="submit" id="ouch">OUCH!</button>
   </p>

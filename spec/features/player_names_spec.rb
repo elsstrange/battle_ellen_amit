@@ -7,6 +7,7 @@ feature 'enter names' do
   end
 
   scenario 'submitting names' do
-    expect(page).to have_content("Player One: #{player_one}\nPlayer Two: #{player_two}")
+    expect(page).to have_content(player_one)
+    expect(page).to have_content(player_two)
   end
 end

@@ -11,8 +11,7 @@ class Game
   end
 
   def attack
-    passive_player.reduce_health
-    @players.rotate!
+    passive_player.reduce_health(10)
   end
 
   def active_player
@@ -23,9 +22,21 @@ class Game
     @players[1]
   end
 
-  private
-
   def turnover
     @players.rotate!
+  end
+
+  def game_over?
+    dead_player?
+  end
+
+  def loser
+    @players.select { |player| player.dead? } [0]
+  end
+
+  private
+
+  def dead_player?
+    @players.any? { |player| player.dead? }
   end
 end

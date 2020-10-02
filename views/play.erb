@@ -1,6 +1,6 @@
-<h1>Player One: <%= game.player_one.name %></h1>
-<h1>Player Two: <%= game.player_two.name %></h1>
-<form action="/attack" method="get">
+<h1><%= game.player_one.name %> vs <%= game.player_two.name %></h1>
+<h2><%= game.active_player.name %>'s Turn</h2>
+<form action="/attack" method="post">
   <p class="button">
     <button type="submit" id="attack">ATTACK <%= game.passive_player.name %>!</button>
   </p>

@@ -38,4 +38,12 @@ feature 'attacking' do
       expect(page).to have_content("ATTACK #{player_two}!")
     end
   end
+
+  context 'end game' do
+    scenario 'player two loses (health is 0)' do
+      18.times { attack_and_continue }
+      attack
+      expect(page).to have_content("#{player_two} lost!")
+    end
+  end
 end

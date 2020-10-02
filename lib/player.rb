@@ -8,7 +8,11 @@ class Player
     @health = DEFAULT_STARTING_HEALTH
   end
 
-  def reduce_health
-    @health -= 10
+  def reduce_health(damage)
+    @health -= damage
+  end
+
+  def dead?
+    @health <= 0
   end
 end
